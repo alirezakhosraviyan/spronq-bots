@@ -11,6 +11,12 @@
 
 &emsp;Everything was **abstract**, and I tried to add **anything** that could add value to the code. So I created a command-line application using different design-patterns whose main command is the "analysis of microchips comparisons" by robots. I could create robots as separate **processes** or **threads**, but from what I assumed (based on the sample input you gave me) each robot receives only 2 inputs and to compare microchips at least 2 inputs is required, in fact, there is practically **no competition** between microchips to compare with **two** inputs, so I wrote the problem in **sync way**. Of course, I tried to create a closer and more realistic feel for the simulator by creating pipes and state-management.
 
+To make the solution clearer, I tried to do the following steps:
+
+- 1 ) I created a map of robots and outputbins with the data structure - which I described below - so that I could interate reecursively on the robots tree and compare their microchips.
+- 2 ) I find robots that have 2 microchips in their state initialy as entry points and run the algorithm reecursively on the robots.
+- 3 ) Print result in cosole
+
 &emsp;However, although I have assumed that it will have only two inputs, the code has been designed in such a way that more inputs can be entered into the robot if necessary, or more rules can be added to the microchip in addition to a simple comparison.
 
 ### Technologies 🐍
@@ -63,7 +69,7 @@
 #### Help 
 
 ```bash
-command # help
+      help
 ```
 Sample: 
 ```bash
